@@ -1,10 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar"; // Import the Navbar component
+import PhotoDisplay from "./components/PhotoDisplay";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hillary</h1>
+      <Navbar /> {/* Add the Navbar */}
+      <PhotoDisplay />
+      <Footer />
     </div>
   );
 }
