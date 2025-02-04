@@ -1,0 +1,48 @@
+.testimonials {
+    background-color: #f9f9f3;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #2f4f4f;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+  }
+  
+  .cta {
+    display: inline-block;
+    font-size: 1rem;
+    color: #d89b29;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  
+  .city-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .city {
+    font-size: 1rem;
+    color: #2f4f4f;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .city::before {
+    font-size: 0.8rem;
+    margin-right: 5px;
+    color: #d89b29;
+  }
+  

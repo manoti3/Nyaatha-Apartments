@@ -1,0 +1,82 @@
+/* HeroSection.css */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 6rem 8rem; /* Increased padding */
+    position: relative;
+    font-family: 'Poppins', sans-serif; /* Matching font */
+}
+
+.hero-images {
+    display: flex;
+    gap: 15px; /* Adjusted spacing */
+    position: relative;
+}
+
+.hero-img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-img:nth-child(1) {
+    height: 180px;
+    width: 100px;
+}
+
+.hero-img:nth-child(2) {
+    height: 240px;
+    width: 180px;
+}
+
+.hero-img:nth-child(3) {
+    height: 270px;
+    width: 220px;
+}
+
+.hero-img:nth-child(4) {
+    height: 240px;
+    width: 180px;
+}
+
+.hero-img:nth-child(5) {
+    height: 180px;
+    width: 100px;
+}
+
+.hero-content {
+    max-width: 520px;
+    margin-left: 4rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Increased font size */
+    color: #333;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Slightly larger text */
+    color: #666;
+    margin: 1.5rem 0;
+}
+
+.hero-button {
+    background-color: #f4b400;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+.hero-button:hover {
+    background-color: #e09b00;
+}

@@ -1,17 +1,21 @@
 import React from "react";
-import Navbar from "./components/Navbar"; // Import the Navbar component
-import PhotoDisplay from "./components/PhotoDisplay";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import FeatureListings from "./components/FeatureListings";
+import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Navbar /> {/* Add the Navbar */}
-      <PhotoDisplay />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <FeatureListings />
+      <Testimonials />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
