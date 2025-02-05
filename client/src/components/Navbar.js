@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          Nyaatha Apartments
+          <img src="/assets/logo.jpeg" alt="Nyaatha Apartments Logo" className="logo-image" />
         </Link>
 
         {/* Desktop Menu */}
