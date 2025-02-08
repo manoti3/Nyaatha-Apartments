@@ -1,60 +1,54 @@
 import React from "react";
-import { Facebook, Instagram, Twitter } from "lucide-react"; // Only available icons
 import "./Footer.css";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Quick Links Section */}
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>Providing top-tier commercial and residential spaces tailored to your needs.</p>
+        </div>
+
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/help">Help</a></li>
-            <li><a href="/profile">Profile</a></li>
+            <li><a href="/accommodation">Accommodation</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
-        {/* Contact Information Section */}
         <div className="footer-section">
-          <h3>Contact Info</h3>
-          <p>Address: 123 RealEstate St, City, Country</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: info@realestate.com</p>
+          <h3>Contact Us</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Location: Nairobi, Kenya</p>
         </div>
 
-        {/* Social Media Section */}
-        <div className="footer-section social-media">
+        <div className="footer-section social-section">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <Facebook size={30} />
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <Instagram size={30} />
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <Twitter size={30} />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
             </a>
           </div>
         </div>
-
-        {/* Newsletter Section */}
-        <div className="footer-section">
-          <h3>Newsletter Signup</h3>
-          <input type="email" placeholder="Enter your email" className="newsletter-input" />
-          <button className="subscribe-btn">Subscribe</button>
-        </div>
       </div>
 
-      {/* Legal Section */}
-      <div className="footer-legal">
-        <p>&copy; 2025 RealEstate. All Rights Reserved.</p>
-        <p>
-          <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a>
-        </p>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Nyaatha Appartments. All rights reserved.</p>
       </div>
     </footer>
   );
