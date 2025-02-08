@@ -77,30 +77,7 @@
     border-radius: 5px;
   }
   
-  .arrow-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-  
-  .arrow-button {
-    background-color: #256c98;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .arrow-button:hover {
-    background-color: #1b4f75;
-  }
-  
-  .arrow-button i {
-    margin-right: 5px;
-  }
+
   
   @media (max-width: 768px) {
     .about-div,

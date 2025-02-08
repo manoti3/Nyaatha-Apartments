@@ -1,0 +1,69 @@
+.commercial-spaces-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .commercial-spaces-list h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .spaces-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .commercial-space {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .commercial-space img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .space-details {
+    flex: 1;
+  }
+  
+  .space-details h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .space-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .enquire-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .enquire-button:hover {
+    background: black;
+    color: white;
+  }
+  

@@ -1,19 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './AboutUs.css'; 
 
 const AboutUs = () => {
-  const navigate = useNavigate();
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return ( 
-    <div id="about-us" className="about-us-container"> {/* Added id for scrolling */}
+    <div id="about-us" className="about-us-container">
       <div className="about-us-content">
         <h1 className="title">About Nyaatha Apartments</h1>
         <div className='about-div'>
@@ -44,14 +34,6 @@ const AboutUs = () => {
           <p className="description-vision">At Nyaatha Apartments, we envision a future where luxury meets affordability. We strive to set a benchmark in real estate, offering the best living spaces that cater to diverse needs while embracing sustainability and innovation.</p>
           <img src="/assets/about4.jpg" alt="Vision" />
         </div>
-      </div>
-      <div className="arrow-buttons">
-        <button className="arrow-button back" onClick={() => navigate(-1)}>
-          <i className="fas fa-arrow-left"></i>
-        </button>
-        <button className="arrow-button up" onClick={scrollToTop}>
-          <i className="fas fa-arrow-up"></i>
-        </button>
       </div>
     </div>
   );
