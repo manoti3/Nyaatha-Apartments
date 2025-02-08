@@ -1,52 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLandmark, faTreeCity, faBuilding, faMountainCity, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import "./Testimonials.css";
+import React, { useState, useEffect } from 'react';
+import './Testimonials.css';
+
+const testimonialsData = [
+  {
+    name: 'John Doe',
+    review: 'This property management system made my rental experience seamless and stress-free!',
+    image: '/assets/user1.jpg',
+  },
+  {
+    name: 'Jane Smith',
+    review: 'A user-friendly platform that ensures everything from payments to bookings runs smoothly!',
+    image: '/assets/user2.jpg',
+  },
+  {
+    name: 'Michael Johnson',
+    review: 'Excellent service and support! I highly recommend it for all property owners.',
+    image: '/assets/user3.jpg',
+  },
+];
 
 const Testimonials = () => {
-  const cities = [
-    { name: "Amsterdam", icon: faLandmark },
-    { name: "Firenze", icon: faTreeCity },
-    { name: "Nairobi", icon: faGlobe },
-    { name: "Madrid", icon: faBuilding },
-    { name: "Kobe", icon: faMountainCity },
-    { name: "Berlin", icon: faLandmark },
-    { name: "Paris", icon: faTreeCity },
-    { name: "Tokyo", icon: faBuilding },
-    { name: "New York", icon: faGlobe },
-    { name: "Sydney", icon: faMountainCity },
-  ];
-
-  const [visibleCities, setVisibleCities] = useState(cities.slice(0, 6));
-  const rotateCities = () => {
-    setVisibleCities((prev) => {
-      const [first, ...rest] = prev;
-      return [...rest, first];
-    });
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(rotateCities, 3000);
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+    }, 4000); // Auto-slide every 4 seconds
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="testimonials">
-      <h2 className="title">Client Testimonials</h2>
-      <p className="description">
-        Discover why we are the trusted choice for short-term apartment rentals.
-      </p>
-      <a href="#reviews" className="cta">
-        Check out our guest reviews ➔
-      </a>
-      <div className="city-logos">
-        {visibleCities.map((city, index) => (
-          <span key={index} className="city">
-            <FontAwesomeIcon icon={city.icon} size="2x" /> {city.name}
-          </span>
-        ))}
+    <div className="testimonials-container">
+      <h2 className="testimonials-title">What Our Clients Say</h2>
+      <div className="testimonial-card">
+        <img src={testimonialsData[currentIndex].image} alt={testimonialsData[currentIndex].name} className="testimonial-image" />
+        <p className="testimonial-review">"{testimonialsData[currentIndex].review}"</p>
+        <h4 className="testimonial-name">- {testimonialsData[currentIndex].name}</h4>
       </div>
-    </section>
+    </div>
   );
 };
 

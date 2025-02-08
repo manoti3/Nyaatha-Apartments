@@ -2,48 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import HeroSection from './HeroSection';
-import WhyChooseUs from './WhyChooseUs';  // Import WhyChooseUs Component
+import WhyChooseUs from './WhyChooseUs';
+import Testimonials from './Testimonials';
+import KeyMetrics from './KeyMetrics';  // Import KeyMetrics Component
 
 const Home = () => {
   const navigate = useNavigate();
   const scrollRef = useRef(null);
 
   const properties = [
-    {
-      type: 'accommodation',
-      image: '/assets/accommodation.jpg',
-      title: 'Luxury Apartment',
-      price: '$1,200/month',
-      details: 'Fully furnished apartment with modern amenities.',
-    },
-    {
-      type: 'accommodation',
-      image: '/assets/room1.jpg',
-      title: 'Standard Room',
-      price: '$800/month',
-      details: 'Cozy room with basic facilities for comfortable living.',
-    },
-    {
-      type: 'accommodation',
-      image: '/assets/room2.jpg',
-      title: 'Deluxe Suite',
-      price: '$1,500/month',
-      details: 'Spacious suite with high-end furnishings.',
-    },
-    {
-      type: 'accommodation',
-      image: '/assets/room3.jpg',
-      title: 'Executive Penthouse',
-      price: '$2,500/month',
-      details: 'High-rise penthouse with a city view.',
-    },
-    {
-      type: 'accommodation',
-      image: '/assets/room4.jpg',
-      title: 'Cozy Studio',
-      price: '$700/month',
-      details: 'Compact studio with essential amenities.',
-    },
+    { type: 'accommodation', image: '/assets/accommodation.jpg', title: 'Luxury Apartment', price: '$1,200/month', details: 'Fully furnished apartment with modern amenities.' },
+    { type: 'accommodation', image: '/assets/room1.jpg', title: 'Standard Room', price: '$800/month', details: 'Cozy room with basic facilities for comfortable living.' },
+    { type: 'accommodation', image: '/assets/room2.jpg', title: 'Deluxe Suite', price: '$1,500/month', details: 'Spacious suite with high-end furnishings.' },
+    { type: 'accommodation', image: '/assets/room3.jpg', title: 'Executive Penthouse', price: '$2,500/month', details: 'High-rise penthouse with a city view.' },
+    { type: 'accommodation', image: '/assets/room4.jpg', title: 'Cozy Studio', price: '$700/month', details: 'Compact studio with essential amenities.' },
   ];
 
   useEffect(() => {
@@ -82,13 +54,18 @@ const Home = () => {
           </div>
         </div>
 
-
-        {/* Why Choose Us Section (Moved Above Slideshow) */}
+        {/* Why Choose Us Section */}
         <WhyChooseUs />
+
+        {/* Key Metrics Section (Added Below Why Choose Us) */}
+        <KeyMetrics />
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* Slideshow Component */}
         <div className="slideshow-wrapper">
-          
+          {/* Add Slideshow component if needed */}
         </div>
       </div>
     </div>
