@@ -1,47 +1,3 @@
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import './Home.css';
-// import HeroSection from './HeroSection';  // Import HeroSection
-
-// const Home = () => {
-//   const navigate = useNavigate();
-
-//   const handleImageClick = (type) => {
-//     if (type === 'commercial') {
-//       navigate('/commercial'); // Navigate to commercial property page
-//     } else if (type === 'accommodation') {
-//       navigate('/accommodation'); // Navigate to accommodation page
-//     }
-//   };
-
-//   return (
-//     <div className="home-container">
-//       <h1>Welcome to Nyaatha Apartments</h1>
-
-//       {/* Image Gallery */}
-//       <div className="image-gallery">
-//         <div className="gallery-item" onClick={() => handleImageClick('commercial')}>
-//           <img src="/assets/commercial.jpg" alt="Commercial Property" />
-//           <button className="cta-button">Explore Commercial Property</button>
-//         </div>
-//         <div className="gallery-item" onClick={() => handleImageClick('accommodation')}>
-//           <img src="/assets/accommodation.jpg" alt="Accommodation" />
-//           <button className="cta-button">Explore Accommodation</button>
-//         </div>
-//       </div>
-
-//       {/* HeroSection after the listings */}
-//       <HeroSection /> {/* Add HeroSection component here */}
-      
-//       <h2>Unveil Our Exclusive Listings</h2>
-//       {/* Slide show component goes here */}
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
@@ -101,32 +57,37 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to Nyaatha Apartments</h1>
-
-      {/* Property Cards Carousel */}
-      <div className="property-carousel" ref={scrollRef}>
-        <div className="property-gallery">
-          {properties.map((property, index) => (
-            <div key={index} className="property-card" onClick={() => navigate(`/${property.type}`)}>
-              <img src={property.image} alt={property.title} className="property-image" />
-              <div className="property-info">
-                <h3>{property.title}</h3>
-                <p>{property.details}</p>
-                <span className="property-price">{property.price}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Full-width Hero Section */}
+      <div className="full-width-hero">
+        <HeroSection />
       </div>
 
-      {/* HeroSection after the listings */}
-      <HeroSection />
-      
-      <h2 className="listings-title">Unveil Our Exclusive Listings</h2>
-      
-      {/* Slideshow Component */}
-      <div className="slideshow-wrapper">
-        <Slideshow />
+      {/* Content Section */}
+      <div className="content-container">
+        <h1 className="home-title new-features-title">New Features</h1>
+
+        {/* Property Cards Carousel */}
+        <div className="property-carousel" ref={scrollRef}>
+          <div className="property-gallery">
+            {properties.map((property, index) => (
+              <div key={index} className="property-card" onClick={() => navigate(`/${property.type}`)}>
+                <img src={property.image} alt={property.title} className="property-image" />
+                <div className="property-info">
+                  <h3>{property.title}</h3>
+                  <p>{property.details}</p>
+                  <span className="property-price">{property.price}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <h2 className="listings-title">Unveil Our Exclusive Listings</h2>
+
+        {/* Slideshow Component */}
+        <div className="slideshow-wrapper">
+          <Slideshow />
+        </div>
       </div>
     </div>
   );

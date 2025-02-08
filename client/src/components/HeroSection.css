@@ -1,82 +1,124 @@
-/* HeroSection.css */
 .hero-section {
+    position: relative;
+    width: 100vw;
+    height: 90vh; /* Adjust to match Hass Consult */
+    overflow: hidden;
+}
+  
+.hero-image-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+  
+.hero-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+  
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure all text remains white */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white; /* Explicitly set to white */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: white; /* Explicitly set to white */
+}
+  
+/* Navigation Arrows */
+.prev-arrow,
+.next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+    border: none;
+    color: white;
+    font-size: 2.5rem; /* Bigger arrow icons */
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #f5f5f5;
-    padding: 6rem 8rem; /* Increased padding */
-    position: relative;
-    font-family: 'Poppins', sans-serif; /* Matching font */
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
-.hero-images {
+.prev-arrow {
+    left: 40px; /* Move further from edge */
+}
+
+.next-arrow {
+    right: 40px;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+    background: rgba(255, 255, 255, 0.3); /* Lighter hover effect */
+    color: #ffd700; /* Gold color on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Soft glow effect */
+}
+
+.prev-arrow svg,
+.next-arrow svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.prev-arrow:hover svg {
+    transform: translateX(-5px); /* Smooth movement effect */
+}
+
+.next-arrow:hover svg {
+    transform: translateX(5px);
+}
+  
+/* Pagination Dots */
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    gap: 15px; /* Adjusted spacing */
-    position: relative;
+    gap: 8px;
 }
-
-.hero-img {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+  
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white; /* Ensure dots are white */
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
 }
-
-.hero-img:nth-child(1) {
-    height: 180px;
-    width: 100px;
-}
-
-.hero-img:nth-child(2) {
-    height: 240px;
-    width: 180px;
-}
-
-.hero-img:nth-child(3) {
-    height: 270px;
-    width: 220px;
-}
-
-.hero-img:nth-child(4) {
-    height: 240px;
-    width: 180px;
-}
-
-.hero-img:nth-child(5) {
-    height: 180px;
-    width: 100px;
-}
-
-.hero-content {
-    max-width: 520px;
-    margin-left: 4rem;
-}
-
-.hero-content h1 {
-    font-size: 3rem; /* Increased font size */
-    color: #333;
-    font-weight: 600;
-}
-
-.hero-content p {
-    font-size: 1.2rem; /* Slightly larger text */
-    color: #666;
-    margin: 1.5rem 0;
-}
-
-.hero-button {
-    background-color: #f4b400;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-weight: 500;
-}
-
-.hero-button:hover {
-    background-color: #e09b00;
+  
+.dot.active {
+    opacity: 1;
+    background: white; /* Ensure active dot remains white */
 }
