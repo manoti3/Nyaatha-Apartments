@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import HeroSection from './HeroSection';
-import Slideshow from './Slideshow';
+import WhyChooseUs from './WhyChooseUs';  // Import WhyChooseUs Component
 
 const Home = () => {
   const navigate = useNavigate();
@@ -82,11 +82,13 @@ const Home = () => {
           </div>
         </div>
 
-        <h2 className="listings-title">Unveil Our Exclusive Listings</h2>
+
+        {/* Why Choose Us Section (Moved Above Slideshow) */}
+        <WhyChooseUs />
 
         {/* Slideshow Component */}
         <div className="slideshow-wrapper">
-          <Slideshow />
+          
         </div>
       </div>
     </div>

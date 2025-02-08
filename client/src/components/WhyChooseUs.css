@@ -1,0 +1,62 @@
+/* @font-face {
+    font-family: 'CustomCalibri';
+    src: url('/fonts/custom-calibri.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  .why-choose-us {
+    font-family: 'CustomCalibri', sans-serif;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+  } */
+  
+  
+  .section-title {
+    font-family: 'CustomCalibri', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 280px;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-title {
+    font-family: 'CustomCalibri', sans-serif;
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  
+  .feature-description {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
