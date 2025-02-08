@@ -23,7 +23,7 @@ const Footer = () => {
 
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: info@example.com</p>
+          <p>Email: info@nyaathaappartments.com</p>
           <p>Phone: +123 456 7890</p>
           <p>Location: Nairobi, Kenya</p>
         </div>
