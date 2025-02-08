@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Search, Calendar, User } from "lucide-react";
+import { Menu, X, Search, Calendar, User, ChevronDown } from "lucide-react";
 import "./Navbar.css"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -15,14 +16,24 @@ const Navbar = () => {
 
         <div className="menu">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/commercial-space" className="nav-link">Commercial Space</Link>
+          <Link to="/commercial-space" className="nav-link">Commercials</Link>
           <Link to="/accommodation" className="nav-link">Accommodation</Link>
-          <Link to="/about" className="nav-link">About Us</Link>
+          <Link to="/about" className="nav-link">About</Link>
           <Link to="/help" className="nav-link">Help</Link>
-          <Link to="/contact" className="nav-link">Contact Us</Link>
-          <Link to="/profile" className="nav-link profile-link">
-            <User className="icon" size={18} /> Profile
-          </Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+
+          {/* Profile Dropdown */}
+          <div className="profile-dropdown">
+            <button className="profile-link" onClick={() => setIsProfileOpen(!isProfileOpen)}>
+              <User className="icon" size={18} /> Profile <ChevronDown size={16} />
+            </button>
+            {isProfileOpen && (
+              <div className="dropdown-menu">
+                <Link to="/profile" className="dropdown-item" onClick={() => setIsProfileOpen(false)}>Account</Link>
+                <Link to="/logout" className="dropdown-item" onClick={() => setIsProfileOpen(false)}>Logout</Link>
+              </div>
+            )}
+          </div>
 
           <div className="search-box">
             <input type="text" placeholder="Search..." />
@@ -39,17 +50,28 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
           <Link to="/" className="mobile-link" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/commercial-space" className="mobile-link" onClick={() => setIsOpen(false)}>Commercial Space</Link>
+          <Link to="/commercial-space" className="mobile-link" onClick={() => setIsOpen(false)}>Commercial</Link>
           <Link to="/accommodation" className="mobile-link" onClick={() => setIsOpen(false)}>Accommodation</Link>
-          <Link to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About Us</Link>
+          <Link to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/help" className="mobile-link" onClick={() => setIsOpen(false)}>Help</Link>
-          <Link to="/contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact Us</Link>
-          <Link to="/profile" className="mobile-link" onClick={() => setIsOpen(false)}>
-            <User className="icon" size={18} /> Profile
-          </Link>
+          <Link to="/contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact</Link>
+
+          {/* Profile Dropdown in Mobile */}
+          <div className="profile-dropdown">
+            <button className="mobile-link profile-btn" onClick={() => setIsProfileOpen(!isProfileOpen)}>
+              <User className="icon" size={18} /> Profile <ChevronDown size={16} />
+            </button>
+            {isProfileOpen && (
+              <div className="dropdown-menu mobile-dropdown">
+                <Link to="/profile" className="dropdown-item" onClick={() => setIsProfileOpen(false)}>Account</Link>
+                <Link to="/logout" className="dropdown-item" onClick={() => setIsProfileOpen(false)}>Logout</Link>
+              </div>
+            )}
+          </div>
 
           <div className="search-box">
             <input type="text" placeholder="Search..." />
