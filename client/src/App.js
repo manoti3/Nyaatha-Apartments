@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Home from "./components/Home";
 import ContactUs from "./components/ContactUs";
-import Accommodation from "./components/Accommodation"; // Import Accommodation Component
+import Accommodations from "./components/Accommodations"; // Import Accommodation Component
 import "./App.css";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/commercial-space" element={<CommercialSpacesList />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/accommodation" element={<Accommodation />} /> {/* Accommodation Route */}
+        <Route path="/accommodations" element={<Accommodations />} /> {/* Accommodation Route */}
       </Routes>
       
       {showFooter && <Footer />}

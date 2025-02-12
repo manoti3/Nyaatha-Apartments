@@ -1,0 +1,177 @@
+{
+    "accommodations": [
+      {
+        "id": 1,
+        "title": "Mercede Suite",
+        "beds": "1-bedroom",
+        "price": "Kes. 4,000/night",
+        "vibe": "THE PINNACLE OF URBAN LIVING",
+        "cover_image": "/images/Mercede/img1.jpg",
+        "images": [
+          "/images/Mercede/img1.jpg",
+          "/images/Mercede/img2.jpg",
+          "/images/Mercede/img3.jpg",
+          "/images/Mercede/img4.jpg",
+          "/images/Mercede/img5.jpg",
+          "/images/Mercede/img6.jpg",
+          "/images/Mercede/img7.jpg",
+          "/images/Mercede/img8.jpg",
+          "/images/Mercede/img9.jpg",
+          "/images/Mercede/img10.jpg"
+          ],
+        "reviews": [
+            {
+              "user_id": 1,
+              "rating": 4,
+              "comment": "Great place, very relaxing!",
+              "date": "2025-02-01"
+            },
+            {
+              "user_id": 2,
+              "rating": 5,
+              "comment": "Absolutely amazing, I loved every moment!",
+              "date": "2025-02-03"
+            }
+          ]
+        },
+      {
+        "id": 2,
+        "title": "Anfo Suite",
+        "beds": "2-bedroom.",
+        "price": "Kes. 6,000/night",
+        "vibe": "ELEVATED URBAN LIFESTYLE",
+        "cover_image": "/images/Anfo/img1.jpg",
+        "images": [
+          "/images/Anfo/img1.jpg",
+          "/images/Anfo/img2.jpg",
+          "/images/Anfo/img3.jpg",
+          "/images/Anfo/img4.jpg",
+          "/images/Anfo/img5.jpg",
+          "/images/Anfo/img6.jpg",
+          "/images/Anfo/img7.jpg",
+          "/images/Anfo/img8.jpg",
+          "/images/Anfo/img9.jpg",
+          "/images/Anfo/img10.jpg"
+          ],
+        "reviews": [
+            {
+              "user_id": 1,
+              "rating": 4,
+              "comment": "Great place, very relaxing!",
+              "date": "2025-02-01"
+            },
+            {
+              "user_id": 2,
+              "rating": 5,
+              "comment": "Absolutely amazing, I loved every moment!",
+              "date": "2025-02-03"
+            }
+          ]
+        },
+      {
+        "id": 3,
+        "title": "Jacoba Suite",
+        "beds": "2-bedroom",
+        "price": "Kes. 6,000/night",
+        "vibe": "REDEFINING MODERN LIVING",
+        "cover_image": "/images/Jacoba/img1.jpg",
+        "images": [
+          "/images/Jacoba/img1.jpg",
+          "/images/Jacoba/img2.jpg",
+          "/images/Jacoba/img3.jpg",
+          "/images/Jacoba/img4.jpg",
+          "/images/Jacoba/img5.jpg",
+          "/images/Jacoba/img6.jpg",
+          "/images/Jacoba/img7.jpg",
+          "/images/Jacoba/img8.jpg",
+          "/images/Jacoba/img9.jpg",
+          "/images/Jacoba/img10.jpg"
+          ],
+        "reviews": [
+            {
+              "user_id": 1,
+              "rating": 4,
+              "comment": "Great place, very relaxing!",
+              "date": "2025-02-01"
+            },
+            {
+              "user_id": 2,
+              "rating": 5,
+              "comment": "Absolutely amazing, I loved every moment!",
+              "date": "2025-02-03"
+            }
+          ]
+        },
+      {
+        "id": 4,
+        "title": "Brescia Suite",
+        "beds": "1-bedroom",
+        "price": "Kes. 4,000/night",
+        "vibe": "ELEGANCE IN EVERY DETAIL",
+        "cover_image": "/images/Brescia/img1.jpg",
+        "images": [
+          "/images/Brescia/img1.jpg",
+          "/images/Brescia/img2.jpg",
+          "/images/Brescia/img3.jpg",
+          "/images/Brescia/img4.jpg",
+          "/images/Brescia/img5.jpg",
+          "/images/Brescia/img6.jpg",
+          "/images/Brescia/img7.jpg",
+          "/images/Brescia/img8.jpg",
+          "/images/Brescia/img9.jpg",
+          "/images/Brescia/img10.jpg",
+          "/images/Brescia/img11.jpg",
+          "/images/Brescia/img12.jpg",
+          "/images/Brescia/img13.jpg",
+          "/images/Brescia/img14.jpg",
+          "/images/Brescia/img15.jpg"
+          ],
+        "reviews": [
+            {
+              "user_id": 1,
+              "rating": 4,
+              "comment": "Great place, very relaxing!",
+              "date": "2025-02-01"
+            },
+            {
+              "user_id": 2,
+              "rating": 5,
+              "comment": "Absolutely amazing, I loved every moment!",
+              "date": "2025-02-03"
+            }
+          ]
+        },
+      {
+        "id": 5,
+        "title": "Gikondi Suite",
+        "beds": "1-bedroom",
+        "price": "Kes. 4,000/night",
+        "vibe": "DESIGNED FOR CONTEMPORARY LIVING",
+        "cover_image": "/images/Gikondi/img1.jpg",
+        "images": [
+          "/images/Gikondi/img1.jpg",
+          "/images/Gikondi/img2.jpg",
+          "/images/Gikondi/img3.jpg",
+          "/images/Gikondi/img4.jpg",
+          "/images/Gikondi/img5.jpg",
+          "/images/Gikondi/img6.jpg",
+          "/images/Gikondi/img7.jpg"
+          ],
+        "reviews": [
+            {
+              "user_id": 1,
+              "rating": 4,
+              "comment": "Great place, very relaxing!",
+              "date": "2025-02-01"
+            },
+            {
+              "user_id": 2,
+              "rating": 5,
+              "comment": "Absolutely amazing, I loved every moment!",
+              "date": "2025-02-03"
+            }
+          ]
+        }
+    ]
+  }
+  
