@@ -67,21 +67,18 @@ import ContactUs from "./components/ContactUs";
 import Accommodations from "./components/Accommodations";
 import PropertyDetails from "./components/PropertyDetails";
 import LoginSignup from "./components/LoginSignup";
+import BookingPage from "./components/BookingPage"; // Import BookingPage
 import "./App.css";
 
 const App = () => {
   const location = useLocation();
   const currentPath = location.pathname.toLowerCase();
 
-  // Hide Navbar on LoginSignup page
   const hideNavbar = currentPath === "/loginsignup";
-
-  // Show Footer only on the Home page
   const showFooter = currentPath === "/";
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Conditionally Render Navbar */}
       {!hideNavbar && <Navbar />}
 
       <Routes>
@@ -92,12 +89,13 @@ const App = () => {
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/accommodation/:id" element={<PropertyDetails />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
+        <Route path="/booking/:id" element={<BookingPage />} /> {/* Booking Page Route */}
       </Routes>
 
-      {/* Show Footer only on the Home page */}
       {showFooter && <Footer />}
     </div>
   );
 };
 
 export default App;
+
