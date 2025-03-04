@@ -1,157 +1,100 @@
+/* Booking Component Styles */
 .booking-link {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background: #fffaef; /* Light background */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: "Arial", sans-serif;
-  }
-  
-  .booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .date-pickers {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .date-picker {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .date-picker label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #8a6434; /* Brownish color */
-  }
-  
-  .react-datepicker-wrapper {
-    width: 100%;
-  }
-  
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .form-inputs input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .reservation-summary {
-    margin-top: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .reservation-summary h3 {
-    color: #bf8501; /* Goldish heading */
-    margin-bottom: 10px;
-  }
-  
-  .accommodation-details {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .accommodation-details img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .details h4 {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .more-details {
-    padding: 8px 12px;
-    background: #bf8501;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .more-details:hover {
-    background: #8a6434;
-  }
-  
-  .rental-details,
-  .total-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    font-size: 16px;
-  }
-  
-  .total-details p {
-    font-weight: bold;
-  }
-  
-  .guest-details p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #343434;
-  }
-  
-  .confirm-booking {
-    width: 100%;
-    padding: 12px;
-    background: #bc9e82;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .confirm-booking:hover {
-    background: #8a6434;
-  }
-  
-  .confirmation-message {
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    background: #d4edda;
-    color: #155724;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  @media (max-width: 600px) {
-    .date-pickers {
-      flex-direction: column;
-    }
-  
-    .accommodation-details {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .reservation-summary {
-      padding: 15px;
-    }
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFAEF;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.booking-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.date-pickers {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-picker label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #BC9E82;
+  border-radius: 5px;
+}
+
+.reservation-summary {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.accommodation-details img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.more-details,
+.confirm-booking {
+  background: #BF8501;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.more-details:hover,
+.confirm-booking:hover {
+  background: #8A6434;
+}
+
+.total-details,
+.rental-details {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.guest-details p {
+  margin: 5px 0;
+}
+
+.confirmation-message {
+  margin-top: 10px;
+  color: #2E8B57;
+  font-weight: bold;
+}
