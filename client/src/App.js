@@ -55,14 +55,12 @@
 // export default App;
 
 
-
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom"; // ❌ No BrowserRouter here!
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Bookings from "./components/Booking";
 import Accommodations from "./components/Accommodations";
 import Commercials from "./components/CommercialSpace";
-import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import CommercialSpacesList from "./components/CommercialSpacesList";
 import Footer from "./components/Footer";
@@ -72,18 +70,26 @@ import ContactUs from "./components/ContactUs";
 import PropertyDetails from "./components/PropertyDetails";
 import LoginSignup from "./components/LoginSignup";
 import BookingPage from "./components/BookingPage";
+import AdminDashboard from "./components/AdminDashboard"; 
 import "./App.css";
+
+const PrivateRoute = ({ element }) => {
+  const role = localStorage.getItem("role");
+  return role === "admin" ? element : <Navigate to="/loginsignup" replace />;
+};
 
 const App = () => {
   const location = useLocation();
   const currentPath = location.pathname.toLowerCase();
 
-  const hideNavbar = currentPath === "/loginsignup";
+  const hideNavbar = currentPath === "/loginsignup" || currentPath.startsWith("/admin");
+  const hideSidebar = currentPath === "/loginsignup" || currentPath.startsWith("/admin");
   const showFooter = currentPath === "/";
 
   return (
     <div className="flex h-screen bg-gray-100">
-      <Sidebar />
+      {!hideSidebar && <Sidebar />}
+
       <div className="flex-1 p-6 overflow-auto">
         {!hideNavbar && <Navbar />}
 
@@ -96,9 +102,17 @@ const App = () => {
           <Route path="/accommodation/:id" element={<PropertyDetails />} />
           <Route path="/loginsignup" element={<LoginSignup />} />
           <Route path="/booking/:id" element={<BookingPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/commercials" element={<Commercials />} />
+
+          {/* ✅ Admin Dashboard - Protected Route */}
+          <Route path="/admin/*" element={<PrivateRoute element={<AdminDashboard />} />} />
+
+          {/* ✅ Redirect /admin-dashboard to /admin */}
+          <Route path="/admin-dashboard" element={<Navigate to="/admin" replace />} />
+          
+          {/* ✅ Catch-all Route - Redirect to Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
         {showFooter && <Footer />}
@@ -108,5 +122,7 @@ const App = () => {
 };
 
 export default App;
+
+
 
 

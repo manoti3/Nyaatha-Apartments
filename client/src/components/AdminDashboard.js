@@ -1,10 +1,9 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Bookings from "./pages/Bookings";
-import Accommodations from "./pages/Accommodations";
-import Commercials from "./pages/Commercials";
-import Dashboard from "./pages/Dashboard";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Bookings from "./Booking"; 
+import Accommodations from "./Accommodations";
+import Commercials from "./CommercialSpace";
 
 function AdminDashboard() {
   return (
@@ -12,10 +11,15 @@ function AdminDashboard() {
       <Sidebar />
       <div className="flex-1 p-6 overflow-auto">
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/bookings" element={<Bookings />} />
-          <Route path="/accommodations" element={<Accommodations />} />
-          <Route path="/commercials" element={<Commercials />} />
+          {/* ✅ Default route for /admin */}
+          <Route path="/" element={<h1 className="text-2xl font-bold">Welcome to Admin Dashboard</h1>} />
+          
+          <Route path="bookings" element={<Bookings />} />
+          <Route path="accommodations" element={<Accommodations />} />
+          <Route path="commercials" element={<Commercials />} />
+
+          {/* ✅ Catch-all for unmatched routes inside /admin */}
+          <Route path="*" element={<Navigate to="/admin" replace />} />
         </Routes>
       </div>
     </div>
@@ -23,3 +27,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+
